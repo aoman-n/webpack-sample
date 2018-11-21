@@ -17,7 +17,16 @@ module.exports = {
       },
       {
         test: /\.(gif|png|jpg)$/,
-        loader: 'url-loader'
+        // loader: 'url-loader'
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 51200,
+              name: './images/[name].[ext]'
+            }
+          }
+        ]
       }
     ]
   },
