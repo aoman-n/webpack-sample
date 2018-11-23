@@ -1,0 +1,9 @@
+#root {
+  background-image: url('../images/kawahagi.jpg');
+  height: 400px;
+}
+
+#test {
+  background-image: url('../images/sakana.jpeg');
+  height: 400px;
+}
