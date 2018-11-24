@@ -1,4 +1,5 @@
 const path = require('path');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -22,5 +23,9 @@ module.exports = {
       name: 'commonlib',
       chunks: 'initial'
     }
-  }
+  },
+  // 引数には、クリーンアップ対象のパスを配列形式で指定する。
+  plugins: [
+    new CleanWebpackPlugin(['dist/*.js'])
+  ]
 }
