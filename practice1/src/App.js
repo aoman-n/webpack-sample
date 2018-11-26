@@ -3,6 +3,7 @@ import CSSModules from 'react-css-modules';
 import styles from './style.css';
 import List from './List';
 import Header from './Header';
+import ebi from './images/ebi.jpg';
 
 // class App extends React.Component {
 //   render() {
@@ -19,6 +20,7 @@ function App() {
     <div>
       <Header />
       <List />
+      <img src={ebi} />
     </div>
   )
 }
