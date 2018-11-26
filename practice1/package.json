@@ -6,10 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --watch --mode development",
-    "start": "webpack-dev-server --open",
     "version:node": "node -v",
     "version:npm": "npm -v",
-    "ver": "npm-run-all version:*"
+    "ver": "npm-run-all version:*",
+    "server": "browser-sync start --config bs-config.js",
+    "watch": "webpack -w",
+    "start": "webpack --watch -d & browser-sync start --config bs-config.js"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +21,7 @@
     "babel-loader": "7.1.4",
     "babel-preset-env": "1.6.1",
     "babel-preset-react": "^6.24.1",
+    "browser-sync": "^2.26.3",
     "css-loader": "^1.0.1",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^2.0.0",
